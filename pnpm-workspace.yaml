@@ -1,22 +1,67 @@
+ignoreWorkspaceCycles: true
 packages:
-  - packages/*
-  - apps/*
-
+- packages/*
+- apps/*
 onlyBuiltDependencies:
-  - bun
-  - sharp
-
+- bun
+- sharp
 packageExtensions:
-  "@mintlify/mdx":
+  '@mintlify/mdx':
     peerDependencies:
-      react: "*"
-      react-dom: "*"
-  "next-mdx-remote-client":
+      react: '*'
+      react-dom: '*'
+  next-mdx-remote-client:
     peerDependencies:
-      react: "*"
-      react-dom: "*"
-
+      react: '*'
+      react-dom: '*'
 peerDependencyRules:
   allowedVersions:
-    react: "19"
-    react-dom: "19"
+    react: '19'
+    react-dom: '19'
+overrides:
+  convex: ^1.47.0
+  effect: ^3.22.1
+  react: 19.2.4
+  react-dom: 19.2.4
+  adm-zip@0.5.16: ^0.6.1
+  axios@1.10.0: ^1.20.0
+  axios@1.13.2: ^1.20.0
+  basic-ftp@5.3.1: ^6.2.1
+  body-parser@1.20.1: ^1.20.6
+  cookie@0.4.2: ^0.7.0
+  cookie@0.5.0: ^0.7.0
+  engine.io@6.5.5: ^6.6.7
+  express@4.18.2: ^4.20.0
+  js-yaml@4.1.0: ^4.3.2
+  katex@0.16.47: ^0.18.2
+  lodash@4.17.21: ^4.18.0
+  path-to-regexp@0.1.7: ^0.1.13
+  postcss-selector-parser@6.1.5: ^7.1.6
+  postcss@8.5.6: ^8.5.23
+  qs@6.11.0: ^6.16.0
+  serve-static@1.15.0: ^1.16.0
+  sharp@0.33.5: ^0.35.5
+  shell-quote@1.8.3: ^1.9.0
+  toml@3.0.0: ^4.2.0
+  uuid@11.1.0: ^11.1.1
+  ws@8.17.1: ^8.21.0
+  ws@8.18.0: ^8.21.0
+  zod@3.21.4: ^3.22.3
+  adm-zip@0.6.0: ^0.6.1
+  axios@1.18.0: ^1.20.0
+  fflate@0.7.3: ^0.7.5
+  fflate@0.8.2: ^0.8.3
+  image-size@2.0.2: ^2.0.3
+  js-yaml@4.3.1: ^4.3.2
+  qs@6.14.2: ^6.16.0
+minimumReleaseAgeExclude:
+- '@mintlify/cli@4.0.1699'
+- '@mintlify/common@1.0.1288'
+- '@mintlify/link-rot@3.0.1512'
+- '@mintlify/og@0.0.86'
+- '@mintlify/package-builder@0.0.77'
+- '@mintlify/prebuild@1.0.1453'
+- '@mintlify/previewing@4.0.1531'
+- '@mintlify/scraping@4.0.1161'
+- '@mintlify/validation@0.1.937'
+- mintlify@4.2.1096

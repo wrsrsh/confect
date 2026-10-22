@@ -12,10 +12,10 @@
   },
   "devDependencies": {
     "@eslint/js": "10.0.1",
-    "@mintlify/scraping": "4.0.632",
+    "@mintlify/scraping": "^4.0.632",
     "eslint": "10.0.2",
     "eslint-plugin-mdx": "3.7.0",
-    "mintlify": "4.2.397",
+    "mintlify": "^4.2.1096",
     "prettier": "3.8.1",
     "react": "19.2.4"
   }

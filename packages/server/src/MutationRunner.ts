@@ -1,9 +1,9 @@
 import * as Ref from "@confect/core/Ref";
-import { type GenericMutationCtx } from "convex/server";
+import { type GenericActionCtx } from "convex/server";
 import { Context, Layer, Schema } from "effect";
 
 const make =
-  (runMutation: GenericMutationCtx<any>["runMutation"]) =>
+  (runMutation: GenericActionCtx<any>["runMutation"]) =>
   <Mutation extends Ref.AnyMutation>(
     mutation: Mutation,
     ...args: Ref.OptionalArgs<Mutation>
@@ -20,7 +20,7 @@ export const MutationRunner = Context.GenericTag<ReturnType<typeof make>>(
 );
 export type MutationRunner = typeof MutationRunner.Identifier;
 
-export const layer = (runMutation: GenericMutationCtx<any>["runMutation"]) =>
+export const layer = (runMutation: GenericActionCtx<any>["runMutation"]) =>
   Layer.succeed(MutationRunner, make(runMutation));
 
 export class MutationRollback extends Schema.TaggedError<MutationRollback>()(

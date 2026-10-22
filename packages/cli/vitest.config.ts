@@ -5,9 +5,9 @@ import sharedConfig from "../../vitest.shared";
 export default mergeConfig(
   sharedConfig,
   defineConfig({
+    root: import.meta.dirname,
     plugins: [tsconfigPaths()],
     test: {
-      root: import.meta.dirname,
     },
   }),
 );

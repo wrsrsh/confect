@@ -6,6 +6,7 @@ import sharedConfig from "../../vitest.shared";
 export default mergeConfig(
   sharedConfig,
   defineConfig({
+    root: import.meta.dirname,
     plugins: [tsconfigPaths()],
     resolve: {
       alias: [
@@ -20,7 +21,6 @@ export default mergeConfig(
       ],
     },
     test: {
-      root: import.meta.dirname,
       include: ["test/**/*.test.ts"],
       globalSetup: ["./test/setup.ts"],
     },

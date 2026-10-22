@@ -4,8 +4,8 @@ import sharedConfig from "../../vitest.shared";
 export default mergeConfig(
   sharedConfig,
   defineProject({
+    root: import.meta.dirname,
     test: {
-      root: import.meta.dirname,
     },
   }),
 );
